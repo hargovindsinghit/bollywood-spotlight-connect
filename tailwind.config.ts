@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Bollywood-inspired colors
+				bollywood: {
+					gold: '#D4AF37',
+					'gold-light': '#F4E4BC',
+					purple: '#663399',
+					'purple-light': '#9966CC',
+					red: '#DC143C',
+					'red-light': '#FF6B8A'
 				}
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
+			backgroundImage: {
+				'bollywood-gradient': 'linear-gradient(135deg, #663399 0%, #D4AF37 50%, #DC143C 100%)',
+				'gold-gradient': 'linear-gradient(135deg, #D4AF37 0%, #F4E4BC 100%)',
+				'purple-gradient': 'linear-gradient(135deg, #663399 0%, #9966CC 100%)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +103,33 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'scale-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out'
 			}
 		}
 	},
